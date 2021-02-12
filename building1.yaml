@@ -1,0 +1,43 @@
+instance: 1   # this is the first building in the dataset
+original_name: house_1   # original name from REDD dataset
+elec_meters:
+  1: &EM6400
+    site_meter: true
+    device_model: EM6400
+  2: &jplug
+    submeter_of: 0 
+    device_model: jplug
+  3: *jplug
+  4: *jplug
+  5: *jplug
+  6: *jplug
+appliances:
+- original_name: fridge
+  type: fridge
+  #floor: 0
+  instance: 1
+  meters: [2]
+
+- original_name: pc
+  type: pc
+  instance: 1
+  #floor: 1
+  meters: [3]
+
+- original_name: lighting
+  type: lights
+  instance: 2
+  #floor: 1
+  meters: [4]
+
+- original_name: deep freezer
+  type: deep freezer
+  instance: 1
+  #floor: 1
+  meters: [5]
+
+- original_name: lamps
+  #floor: 1
+  type: lamp   
+  instance: 1
+  meters: [6]
